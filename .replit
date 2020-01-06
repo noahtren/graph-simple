@@ -1,2 +1,2 @@
-language = "nodejs"
+language = "react"
 run = "npm start"
