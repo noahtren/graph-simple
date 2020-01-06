@@ -4,6 +4,8 @@ import * as ReactDOM from 'react-dom';
 import { Editor, Node, Config, MenuItem } from 'react-flow-editor';
 import { Connection } from 'react-flow-editor/dist/types';
 
+import {inputFactory, denseFactory, reluFactory} from './nn_nodes';
+
 require('./simple.scss');
 
 type LogProps = { subscribe: (update: (log: string) => void) => void };
@@ -118,12 +120,14 @@ const config: Config = {
     direction: 'we'
 };
 
+
+
 ReactDOM.render(
     <div>
         <div className="flow-menu">
-            <MenuItem name="Node Type 1" factory={node1Factory} />
-            <MenuItem name="Node Type 2" factory={node2Factory} />
-            <MenuItem name="Node Type 3" factory={node3Factory} />
+            <MenuItem name="Input Layer" factory={inputFactory} />
+            <MenuItem name="Dense Layer" factory={denseFactory} />
+            <MenuItem name="ReLU Activation" factory={reluFactory} />
         </div>
         <Log subscribe={update => log = update} />
         <Editor config={config} nodes={nodes} />
