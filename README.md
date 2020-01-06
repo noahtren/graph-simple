@@ -1,5 +1,7 @@
 # Example
 
+[![Run on Repl.it](https://repl.it/badge/github/noahtren/graph-simple)](https://repl.it/github/noahtren/graph-simple)
+
 Some *getting-started* examples.
 
 ## Simple
